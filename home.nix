@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # set cursor size and dpi for 4k monitor
@@ -90,8 +90,19 @@
     pciutils # lspci
     usbutils # lsusb
   ];
-  
-  programs.kitty.enable = true;
+
+  programs.kitty = lib.mkForce {
+    enable = true;
+    settings = {
+      background_opacity = "0.67";
+      font_family = "Inconsolata Nerd Font";
+      bold_font = "Inconsolata Nerd Font Bold";
+      italic_font = "Inconsolata Nerd Font Italic";
+      bold_italic_font = "Inconsalata Nerd Font Bold Italic";
+      font_size = "13";
+    };
+  };
+
 
   #
   # This value determines the home Manager release that your

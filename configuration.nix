@@ -108,7 +108,11 @@
    ];
 
    environment.variables.EDITOR = "vscode";
-
+   
+   # install fonts
+   fonts.packages = with pkgs; [
+     nerd-fonts.inconsolata
+   ];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
