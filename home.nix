@@ -17,10 +17,15 @@
     };
   };
 
+  # Default applications 
+  home.sessionVariables = {
+    TERMINAL = "kitty";
+  };
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # here is some command line tools I use frequently
     # feel free to add your own or remove some of them
+    kitty
     discord
     fastfetch
     nnn # terminal file manager
@@ -86,7 +91,7 @@
     usbutils # lsusb
   ];
   
-
+  programs.kitty.enable = true;
 
   #
   # This value determines the home Manager release that your
