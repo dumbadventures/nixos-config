@@ -29,6 +29,7 @@
     discord
     fastfetch
     nnn # terminal file manager
+    vscode
 
     # archives
     zip
