@@ -30,6 +30,7 @@
     fastfetch
     nnn # terminal file manager
     vscode
+    librewolf
 
     # archives
     zip
